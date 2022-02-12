@@ -1,0 +1,39 @@
+{
+  "name": "discord.js-say",
+  "version": "0.0.1",
+  "description": "discord.js-say is a Discord.js framework that focuses on implementing common solutions to problems.",
+  "main": "index.js",
+  "scripts": {
+    "test": "ava",
+    "start": "tsc && node dist/index.js"
+  },
+  "keywords": [
+    "discord.js",
+    "framework",
+    "typescript"
+  ],
+  "author": "m5x5",
+  "license": "ISC",
+  "devDependencies": {
+    "@ava/typescript": "^3.0.1",
+    "@types/node": "^17.0.17",
+    "ava": "^4.0.1"
+  },
+  "ava": {
+    "files": [
+      "src/**/*.test.ts"
+    ],
+    "concurrency": 5,
+    "failWithoutAssertions": false,
+    "typescript": {
+      "rewritePaths": {
+        "src/": "dist/"
+      },
+      "compile": "tsc"
+    },
+    "verbose": true
+  },
+  "dependencies": {
+    "discord.js": "^13.6.0"
+  }
+}
